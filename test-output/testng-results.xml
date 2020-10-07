@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="70462" started-at="2020-10-07T17:03:34 IST" finished-at="2020-10-07T17:04:44 IST">
+    <groups>
+    </groups>
+    <test name="Validating Basic Page" duration-ms="17231" started-at="2020-10-07T17:03:34 IST" finished-at="2020-10-07T17:03:51 IST">
+      <class name="POMTutorial.BasePageTest">
+        <test-method status="PASS" signature="bTest()[pri:0, instance:POMTutorial.BasePageTest@7db12bb6]" name="bTest" is-config="true" duration-ms="6480" started-at="2020-10-07T17:03:34 IST" finished-at="2020-10-07T17:03:40 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bTest -->
+        <test-method status="PASS" signature="BasicSitePageTest()[pri:0, instance:POMTutorial.BasePageTest@7db12bb6]" name="BasicSitePageTest" duration-ms="3302" started-at="2020-10-07T17:03:40 IST" finished-at="2020-10-07T17:03:44 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BasicSitePageTest -->
+        <test-method status="PASS" signature="PageTitle()[pri:0, instance:POMTutorial.BasePageTest@7db12bb6]" name="PageTitle" duration-ms="3014" started-at="2020-10-07T17:03:44 IST" finished-at="2020-10-07T17:03:47 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PageTitle -->
+        <test-method status="PASS" signature="aTest()[pri:0, instance:POMTutorial.BasePageTest@7db12bb6]" name="aTest" is-config="true" duration-ms="4393" started-at="2020-10-07T17:03:47 IST" finished-at="2020-10-07T17:03:51 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aTest -->
+      </class> <!-- POMTutorial.BasePageTest -->
+    </test> <!-- Validating Basic Page -->
+    <test name="Validating Login Page" duration-ms="53205" started-at="2020-10-07T17:03:51 IST" finished-at="2020-10-07T17:04:44 IST">
+      <class name="POMTutorial.LoginPageTest">
+        <test-method status="PASS" signature="bTest()[pri:0, instance:POMTutorial.LoginPageTest@1ffaf86]" name="bTest" is-config="true" duration-ms="5509" started-at="2020-10-07T17:03:51 IST" finished-at="2020-10-07T17:03:57 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bTest -->
+        <test-method status="PASS" signature="UserLoggedinPageTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:POMTutorial.LoginPageTest@1ffaf86]" name="UserLoggedinPageTest" duration-ms="27036" started-at="2020-10-07T17:03:57 IST" data-provider="getData" finished-at="2020-10-07T17:04:24 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[gyousif.rahma.3@burgas.vip]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Devtest123@]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Authorised User]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UserLoggedinPageTest -->
+        <test-method status="PASS" signature="UserLoggedinPageTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:POMTutorial.LoginPageTest@1ffaf86]" name="UserLoggedinPageTest" duration-ms="16479" started-at="2020-10-07T17:04:24 IST" data-provider="getData" finished-at="2020-10-07T17:04:40 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[zchah@asdbwegweq.xyz]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Devtest123@]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Second User]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UserLoggedinPageTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:POMTutorial.LoginPageTest@1ffaf86]" name="teardown" is-config="true" duration-ms="4170" started-at="2020-10-07T17:04:40 IST" finished-at="2020-10-07T17:04:44 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- POMTutorial.LoginPageTest -->
+    </test> <!-- Validating Login Page -->
+  </suite> <!-- Suite -->
+</testng-results>
