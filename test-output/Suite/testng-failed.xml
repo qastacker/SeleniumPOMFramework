@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
-  <test thread-count="5" name="Validating Base Page for new customer(failed)" parallel="tests">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="POMTutorial.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="Validating Basic Page(failed)">
     <classes>
       <class name="POMTutorial.BasePageTest">
         <methods>
@@ -12,16 +15,16 @@
         </methods>
       </class> <!-- POMTutorial.BasePageTest -->
     </classes>
-  </test> <!-- Validating Base Page for new customer(failed) -->
-  <test thread-count="5" name="Validating User Login(failed)" parallel="tests">
+  </test> <!-- Validating Basic Page(failed) -->
+  <test thread-count="5" name="Validating Login Page(failed)">
     <classes>
       <class name="POMTutorial.LoginPageTest">
         <methods>
-          <include name="UserLoggedinPageTest" invocation-numbers="0 1"/>
+          <include name="UserLoggedinPageTest"/>
           <include name="teardown"/>
           <include name="bTest"/>
         </methods>
       </class> <!-- POMTutorial.LoginPageTest -->
     </classes>
-  </test> <!-- Validating User Login(failed) -->
+  </test> <!-- Validating Login Page(failed) -->
 </suite> <!-- Failed suite [Suite] -->

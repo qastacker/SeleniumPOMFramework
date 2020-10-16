@@ -12,12 +12,16 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
 import Pages.BasePage;
 import Pages.LoginPage;
 import resources.base;
 
 public class LoginPageTest extends base {
 
+	ExtentReports extent;
 	BasePage l;
 	LoginPage lp;
 	public static Logger log = LogManager.getLogger(base.class.getName());
@@ -28,11 +32,19 @@ public class LoginPageTest extends base {
 		log.info("Driver is initialised");
 
 		driver.manage().window().maximize();
+		String path=System.getProperty("user.dir")+"\\reports\\loginPage.html";
+		ExtentSparkReporter reporter=new ExtentSparkReporter(path);
+		reporter.config().setReportName("Hubstaff - Guest Login Automation Result");
+		reporter.config().setDocumentTitle("Test Results");
+		extent=new ExtentReports();
+		extent.attachReporter(reporter);
+		extent.setSystemInfo("Tester", "Azhar");
 	}
 
 	@Test(dataProvider = "getData")
 	public void UserLoggedinPageTest(String email, String password, String text) throws InterruptedException {
 
+		extent.createTest("Basic Users Login Test");
 		driver.get(prop.getProperty("url"));
 		log.info("Navigated to New First page");
 //		String url1="https://hubstaff.com/?ab=refresh";
@@ -75,11 +87,13 @@ public class LoginPageTest extends base {
 		log.info("Successfully verified User Name");
 		uname.click();
 		// Thread.sleep(3000);
+		
 		/** Select Dropdown **/
+		
 		lp.getSignOut().click();
 		log.info("Successfully " + uname1 + " Loggged out");
 		Thread.sleep(5000);
-
+		extent.flush();
 	}
 
 //	@Test
@@ -106,7 +120,7 @@ public class LoginPageTest extends base {
 //		Object[][] data=new Object[3][3];
 		Object[][] data = new Object[2][3];
 
-		data[0][0] = "gyousif.rahma.3@burgas.vip";
+		data[0][0] = "ezizo.zidane.1232@googleappmail.com";
 		data[0][1] = "Devtest123@";
 		data[0][2] = "Authorised User";
 
