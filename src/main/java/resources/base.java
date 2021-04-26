@@ -15,6 +15,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class base {
 
 	public static WebDriver driver;
@@ -23,21 +25,21 @@ public class base {
 	public WebDriver initializeDriver() throws IOException {
 
 		prop = new Properties();
-		FileInputStream fis = new FileInputStream("E:\\qagit\\SeleniumPOMFramework\\src\\main\\java\\resources\\data.properties");
+		FileInputStream fis = new FileInputStream(
+				"E:\\qagithub\\SeleniumPOMFramework\\src\\main\\java\\resources\\data.properties");
 
 		prop.load(fis);
 		String browserName = prop.getProperty("browser");
 		System.out.println(browserName);
 
 		if (browserName.equals("chrome")) {
-			
-			
-			System.setProperty("webdriver.chrome.driver",
-					"C://Users//Adol-sys-410//Downloads//ujars//chromedriver.exe");
+
+			// System.setProperty("webdriver.chrome.driver","C://Users//Adol-sys-410//Downloads//ujars//chromedriver.exe");
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		} else if (browserName.equals("firefox")) {
-			System.setProperty("webdriver.gecko.driver",
-					"C://Users//Adol-sys-410//Downloads//geckodriver-v0.24.0-win64//geckodriver.exe");
+			// System.setProperty("webdriver.gecko.driver","C://Users//Adol-sys-410//Downloads//geckodriver-v0.24.0-win64//geckodriver.exe");
+			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 		} else if (browserName.equals("IE")) {
 //	IE code
@@ -47,16 +49,16 @@ public class base {
 		return driver;
 
 	}
-	
-	public String getScreenShotPath(String testCaseName,WebDriver driver) throws IOException
-	{
+
+	public String getScreenShotPath(String testCaseName, WebDriver driver) throws IOException {
 		Calendar calendar = Calendar.getInstance();
 		SimpleDateFormat formater = new SimpleDateFormat("dd_MM_yyy_hh_mm_ss");
-		//String png= System.currentTimeMillis()+ ".png";
-		TakesScreenshot ts=(TakesScreenshot) driver;
-		File source =ts.getScreenshotAs(OutputType.FILE);
-		String destinationFile = System.getProperty("user.dir")+"\\reports\\"+testCaseName+formater.format(calendar.getTime())+".png";
-		FileUtils.copyFile(source,new File(destinationFile));
+		// String png= System.currentTimeMillis()+ ".png";
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		String destinationFile = System.getProperty("user.dir") + "\\reports\\" + testCaseName
+				+ formater.format(calendar.getTime()) + ".png";
+		FileUtils.copyFile(source, new File(destinationFile));
 		return destinationFile;
 	}
 

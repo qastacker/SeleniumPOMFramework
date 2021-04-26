@@ -49,12 +49,12 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>E:\qagit\SeleniumPOMFramework\testng.xml</span>
+                    <span>E:\qagithub\SeleniumPOMFramework\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Suite">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -107,7 +107,17 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="POMTutorial.LoginPageTest" hash-for-method="UserLoggedinPageTest(gyousif.rahma.3@burgas.vip, Devtest123@, Authorised USer)">UserLoggedinPageTest(gyousif.rahma.3@burgas.vip, Devtest123@, Authorised USer)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="POMTutorial.BasePageTest" hash-for-method="PageTitle">PageTitle</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="POMTutorial.LoginPageTest" hash-for-method="UserLoggedinPageTest(zchah@asdbwegweq.xyz, Devtest123@, Second User)">UserLoggedinPageTest(zchah@asdbwegweq.xyz, Devtest123@, Second User)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="POMTutorial.LoginPageTest" hash-for-method="UserLoggedinPageTest(ezizo.zidane.1232@googleappmail.com, Devtest123@, Authorised User)">UserLoggedinPageTest(ezizo.zidane.1232@googleappmail.com, Devtest123@, Authorised User)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -130,10 +140,18 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="UserLoggedinPageTest(gyousif.rahma.3@burgas.vip, Devtest123@, Authorised USer)">
-                  </a> <!-- UserLoggedinPageTest(gyousif.rahma.3@burgas.vip, Devtest123@, Authorised USer) -->
+                  <a name="UserLoggedinPageTest(zchah@asdbwegweq.xyz, Devtest123@, Second User)">
+                  </a> <!-- UserLoggedinPageTest(zchah@asdbwegweq.xyz, Devtest123@, Second User) -->
                   <span class="method-name">UserLoggedinPageTest</span>
-                  <span class="parameters">(gyousif.rahma.3@burgas.vip, Devtest123@, Authorised USer)</span>
+                  <span class="parameters">(zchah@asdbwegweq.xyz, Devtest123@, Second User)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="UserLoggedinPageTest(ezizo.zidane.1232@googleappmail.com, Devtest123@, Authorised User)">
+                  </a> <!-- UserLoggedinPageTest(ezizo.zidane.1232@googleappmail.com, Devtest123@, Authorised User) -->
+                  <span class="method-name">UserLoggedinPageTest</span>
+                  <span class="parameters">(ezizo.zidane.1232@googleappmail.com, Devtest123@, Authorised User)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -151,24 +169,38 @@
                   <span class="method-name">BasicSitePageTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="PageTitle">
+                  </a> <!-- PageTitle -->
+                  <span class="method-name">PageTitle</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">E:\qagit\SeleniumPOMFramework\testng.xml</span>
+            <span class="header-content">E:\qagithub\SeleniumPOMFramework\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;Suite&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;Test&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;POMTutorial.Listeners&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;Validating Basic Page&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;POMTutorial.BasePageTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Validating Basic Page --&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;Validating Login Page&quot;&gt;
+    &lt;classes&gt;
       &lt;class name=&quot;POMTutorial.LoginPageTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test --&gt;
+  &lt;/test&gt; &lt;!-- Validating Login Page --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -180,7 +212,10 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (2 classes)</span>
+                <span class="test-name">Validating Basic Page (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Validating Login Page (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -206,20 +241,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'UserLoggedinPageTest')
 data.setCell(0, 2, 'POMTutorial.LoginPageTest')
-data.setCell(0, 3, 13585);
+data.setCell(0, 3, 25162);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'BasicSitePageTest')
-data.setCell(1, 2, 'POMTutorial.BasePageTest')
-data.setCell(1, 3, 505);
+data.setCell(1, 1, 'UserLoggedinPageTest')
+data.setCell(1, 2, 'POMTutorial.LoginPageTest')
+data.setCell(1, 3, 20949);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'BasicSitePageTest')
+data.setCell(2, 2, 'POMTutorial.BasePageTest')
+data.setCell(2, 3, 6414);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'PageTitle')
+data.setCell(3, 2, 'POMTutorial.BasePageTest')
+data.setCell(3, 3, 3031);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 14 seconds</span>
+              <span class="suite-total-time">Total running time: 55 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -250,40 +293,36 @@ return data;
                 <span class="method-name">bTest</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">BasicSitePageTest</span>
+                <span class="method-start">2555 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">PageTitle</span>
+                <span class="method-start">8976 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">aTest</span>
+                <span class="method-start">12009 ms</span>
+              </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">POMTutorial.LoginPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">bTest</span>
-                <span class="method-start">14170 ms</span>
+                <span class="method-start">16351 ms</span>
               </div> <!-- configuration-test before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">POMTutorial.BasePageTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">BasicSitePageTest</span>
-                <span class="method-start">25339 ms</span>
+                <span class="method-name">UserLoggedinPageTest(ezizo.zidane.1232@googleappmail.com, Devtest123@, Authorised User)</span>
+                <span class="method-start">17869 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">POMTutorial.LoginPageTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">UserLoggedinPageTest(gyousif.rahma.3@burgas.vip, Devtest123@, Authorised USer)</span>
-                <span class="method-start">25863 ms</span>
+                <span class="method-name">UserLoggedinPageTest(zchah@asdbwegweq.xyz, Devtest123@, Second User)</span>
+                <span class="method-start">43032 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">POMTutorial.BasePageTest</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
-                <span class="method-name">aTest</span>
-                <span class="method-start">39451 ms</span>
-              </div> <!-- configuration-test after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">POMTutorial.LoginPageTest</div> <!-- chronological-class-name -->
-              <div class="configuration-test after">
-                <span class="method-name">aTest</span>
-                <span class="method-start">39828 ms</span>
+                <span class="method-name">teardown</span>
+                <span class="method-start">63982 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
