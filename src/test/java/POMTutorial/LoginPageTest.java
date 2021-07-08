@@ -88,7 +88,7 @@ public class LoginPageTest extends base {
 		uname.click();
 		// Thread.sleep(3000);
 		
-		/** Select Dropdown **/
+		/** Select the Dropdown **/
 		
 		lp.getSignOut().click();
 		log.info("Successfully " + uname1 + " Loggged out");
