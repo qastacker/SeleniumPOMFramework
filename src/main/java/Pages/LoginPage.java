@@ -17,7 +17,6 @@ public class LoginPage {
 	public LoginPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver=driver;
-	
 	}
 
 	public WebElement getEmail() {
